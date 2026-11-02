@@ -86,7 +86,7 @@ static void* rutina_juez(void* arg) {
                 break;
             }
         if (todos) {
-            printf("[Mesa %d] Fin sin ganador: las fichas agotaron sus movimientos\n", m->id);
+            printf("[Mesa %d]No hay mas movimientos posibles, por defecto ganan los perros \n", m->id);
             break;
         }
         sleep_ms(POLL_JUEZ_MS);
