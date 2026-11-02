@@ -35,7 +35,7 @@ typedef struct Mesa {
 static void dormir_ms(Mesa* m, int ms) {
     while (ms > 0 && atomic_load(&m->activa)) {
         int rebanada = ms > 5 ? 5 : ms;
-        dormir_ms_simple(rebanada);
+        sleep_ms(rebanada);
         ms -= rebanada;
     }
 }

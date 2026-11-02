@@ -131,7 +131,6 @@ static void ejecutar_torneo(const ConfigCaso* cfg, int N, int M) {
 
     if (!servidor_corriendo) {
         pthread_mutex_lock(&cola.mtx);
-        int descartados = cola.tail - cola.head;
         pthread_mutex_unlock(&cola.mtx);
         printf("[Servidor] SIGINT: no se aceptan mas jugadores");
     }
